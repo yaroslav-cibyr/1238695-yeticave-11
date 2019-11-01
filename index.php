@@ -113,7 +113,19 @@ $user_name = 'Ярослав';
                 ];
 
                 ?>
+                <?php
 
+                function formatPrice(int $price): string
+                {
+                    $formatPrice = (string)$price;
+                    $price = ceil($price);
+                    if ($price >= 1000) {
+                        $formatPrice = number_format($price, 0, ".", " ");
+                    }
+                    return $formatPrice . " ₽";
+                }
+
+                ?>
                 <?php foreach ($products as $product): ?>
                     <li class="lots__item lot">
                         <div class="lot__image">
@@ -127,8 +139,8 @@ $user_name = 'Ярослав';
                                 <div class="lot__rate">
 
                                     <span
-                                        class="lot__amount"></span>
-                                    <span class="lot__cost">цена</span>
+                                        class="lot__amount">Стартовая цена</span>
+                                    <span class="lot__cost"><?php echo formatPrice($product["price"]) ?></span>
 
                                 </div>
                                 <div class="lot__timer timer">
