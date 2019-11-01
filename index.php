@@ -51,7 +51,7 @@ $user_name = 'Ярослав';
         </div>
     </header>
     <?php
-    $categories = ["Доски и лыжи", "Крепления", " Ботинки", " Одежда", " Инструменты", " Разное"];
+    $categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
     ?>
     <main class="container">
         <section class="promo">
@@ -73,7 +73,7 @@ $user_name = 'Ярослав';
             <ul class="lots__list">
                 <?php
 
-                $productes = [
+                $products = [
                     [
                         "name" => "2014 Rossignol District Snowboard",
                         "categories" => "Доски и лыжи",
@@ -113,19 +113,8 @@ $user_name = 'Ярослав';
                 ];
 
                 ?>
-                <?php
-                function formatCost(int $cost): string
-                {
-                    $cost = ceil($cost);
-                    if ($cost >= 1000) {
-                        $cost = number_format($cost);
-                    }
-                    return $cost;
-                }
 
-
-                ?>
-                <?php foreach ($productes as $product): ?>
+                <?php foreach ($products as $product): ?>
                     <li class="lots__item lot">
                         <div class="lot__image">
                             <img src="<?php echo $product["img"] ?>" width="350" height="260" alt="">
@@ -138,7 +127,7 @@ $user_name = 'Ярослав';
                                 <div class="lot__rate">
 
                                     <span
-                                        class="lot__amount"><?php echo formatCost($product["price"]) . PHP_EOL . " ₽"; ?></span>
+                                        class="lot__amount"></span>
                                     <span class="lot__cost">цена</span>
 
                                 </div>
