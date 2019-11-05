@@ -1,24 +1,16 @@
 <?php
 declare(strict_types=1);
-$is_auth = rand(0, 1);
-
-$user_name = 'Ярослав';
-
-
 ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-
     <title><?php echo $title; ?></title>
-
     <link href="../css/normalize.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
 <div class="page-wrapper">
-
     <header class="main-header">
         <div class="main-header__container container">
             <h1 class="visually-hidden">YetiCave</h1>
@@ -30,12 +22,10 @@ $user_name = 'Ярослав';
                 <input class="main-header__search-btn" type="submit" name="find" value="Найти">
             </form>
             <a class="main-header__add-lot button" href="pages/add-lot.html">Добавить лот</a>
-
             <nav class="user-menu">
-
-                <?php if ($is_auth === 1): ?>
+                <?php if ($isAuth === 1): ?>
                     <div class="user-menu__logged">
-                        <p><?= $user_name; ?></p>
+                        <p><?php echo $userName; ?></p>
                         <a class="user-menu__bets" href="pages/my-bets.html">Мои ставки</a>
                         <a class="user-menu__logout" href="#">Выход</a>
                     </div>
@@ -49,17 +39,11 @@ $user_name = 'Ярослав';
                         </li>
                     </ul>
                 <?php endif; ?>
-
             </nav>
         </div>
     </header>
-
-
      <?php echo $main;?>
 </div>
-<?php
-$categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
-?>
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
@@ -127,7 +111,6 @@ $categories = ["Доски и лыжи", "Крепления", "Ботинки",
         </div>
     </div>
 </footer>
-
 <script src="flatpickr.js"></script>
 <script src="script.js"></script>
 </body>
