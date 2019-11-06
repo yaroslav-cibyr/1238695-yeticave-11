@@ -1,5 +1,7 @@
 <?php
 declare(strict_types=1);
+date_default_timezone_set("Europe/Kiev");
+setlocale(LC_ALL, "ru");
 
 require_once "helpers.php";
 require_once "functions.php";
