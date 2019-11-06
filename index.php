@@ -7,7 +7,7 @@ require_once "helpers.php";
 require_once "functions.php";
 $isAuth = rand(0, 1);
 $userName = 'Ярослав';
-$products = [
+$lots = [
     [
         "name" => "2014 Rossignol District Snowboard",
         "categories" => "Доски и лыжи",
@@ -54,7 +54,7 @@ $products = [
 $categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
 $pageContent = include_template('main.php', [
     'categories' => $categories,
-    'products' => $products,
+    'products' => $lots,
 ]);
 $page = include_template('layout.php', [
     'categories' => $categories,
