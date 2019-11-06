@@ -13,7 +13,7 @@ function timeLeft(string $datetime): array
     $interval = date_diff($nowDate, $endDate);
     $hours = date_interval_format($interval, '%H') + date_interval_format($interval, '%a') * 24;
     $hours = str_pad((string)$hours, 2, "0", STR_PAD_LEFT);
-    $minutes = $interval->i;
+    $minutes = date_interval_format($interval, '%i')
     $minutes = str_pad((string)$minutes, 2, "0", STR_PAD_LEFT);
     $result = [$hours, $minutes];
 
