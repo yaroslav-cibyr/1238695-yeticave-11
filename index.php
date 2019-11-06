@@ -54,7 +54,7 @@ $lots = [
 $categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
 $pageContent = include_template('main.php', [
     'categories' => $categories,
-    'products' => $lots,
+    'lots' => $lots,
 ]);
 $page = include_template('layout.php', [
     'categories' => $categories,
