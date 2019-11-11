@@ -1,3 +1,5 @@
+CREATE DATABASE yeticave
+
 CREATE TABLE `yeticave`.`user`(
 `id` INT NOT NULL AUTO_INCREMENT ,
 `name` VARCHAR(100) NOT NULL ,
@@ -8,13 +10,6 @@ CREATE TABLE `yeticave`.`user`(
 PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
-CREATE TABLE `yeticave`.`user_bids`(
-`id` INT NOT NULL AUTO_INCREMENT ,
-`title` VARCHAR(100) NOT NULL ,
-`amount` INT NOT NULL ,
-`data_time` TIMESTAMP NOT NULL,
-PRIMARY KEY (`id`)
-) ENGINE = InnoDB;
 
 CREATE TABLE `yeticave`.`category`(
 `id` INT NOT NULL AUTO_INCREMENT ,
