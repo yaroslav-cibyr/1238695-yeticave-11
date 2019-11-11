@@ -1,4 +1,4 @@
-CREATE DATABASE yeticave
+CREATE DATABASE yeticave;
 
 CREATE TABLE `yeticave`.`user`(
 `id` INT NOT NULL AUTO_INCREMENT ,
@@ -14,6 +14,7 @@ PRIMARY KEY (`id`)
 CREATE TABLE `yeticave`.`category`(
 `id` INT NOT NULL AUTO_INCREMENT ,
 `title` VARCHAR(100) NOT NULL ,
+`code` VARCHAR(100) NOT NULL ,
 PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
@@ -25,7 +26,7 @@ CREATE TABLE `yeticave`.`lot`(
 `winner_id` INT NOT NULL ,
 `starting_price` INT NOT NULL ,
 `bid_step` INT NOT NULL ,
-`images` VARCHAR(255) NOT NULL ,
+`image` VARCHAR(255) NOT NULL ,
 `expiration_date` TIMESTAMP NOT NULL ,
 `description` VARCHAR(255) NOT NULL ,
 `creation_date` TIMESTAMP NOT NULL ,
