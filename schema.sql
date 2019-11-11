@@ -5,30 +5,25 @@ CREATE TABLE `yeticave`.`user`(
 `password` VARCHAR(255) NOT NULL ,
 `contacts` VARCHAR(255) NOT NULL ,
 `date_of_registration` TIMESTAMP NOT NULL ,
-`created_lots_id` INT NOT NULL ,
-`rate_id` INT NOT NULL ,
 PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
-CREATE TABLE `yeticave`.`account_registration`(
+CREATE TABLE `yeticave`.`user_bids`(
 `id` INT NOT NULL AUTO_INCREMENT ,
-`name` VARCHAR(100) NOT NULL ,
-`email` VARCHAR(255) NOT NULL ,
-`password` VARCHAR(255) NOT NULL ,
-`contacts` VARCHAR(255) NOT NULL ,
-`date_of_registration` TIMESTAMP NOT NULL ,
+`title` VARCHAR(100) NOT NULL ,
+`amount` INT NOT NULL ,
+`data_time` TIMESTAMP NOT NULL,
 PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
 CREATE TABLE `yeticave`.`category`(
 `id` INT NOT NULL AUTO_INCREMENT ,
 `title` VARCHAR(100) NOT NULL ,
-`description` VARCHAR(255) NOT NULL ,
 `category_id` INT NOT NULL ,
 PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
-CREATE TABLE `yeticave`.`lots`(
+CREATE TABLE `yeticave`.`lot`(
 `id` INT NOT NULL AUTO_INCREMENT ,
 `name` VARCHAR(100) NOT NULL ,
 `category_id` INT NOT NULL ,
@@ -40,14 +35,13 @@ CREATE TABLE `yeticave`.`lots`(
 `expiration_date` TIMESTAMP NOT NULL ,
 `description` VARCHAR(255) NOT NULL ,
 `creation_date` TIMESTAMP NOT NULL ,
-`Date_of_completion` TIMESTAMP NOT NULL ,
 PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
-CREATE TABLE `yeticave`.`rate`(
+CREATE TABLE `yeticave`.`bid`(
 `id` INT NOT NULL AUTO_INCREMENT ,
 `date` TIMESTAMP NOT NULL ,
-`thusere_amount` INT NOT NULL ,
+`amount` INT NOT NULL ,
 `user_id` INT NOT NULL ,
 `lot_id` INT NOT NULL ,
 PRIMARY KEY (`id`)
