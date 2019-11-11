@@ -14,7 +14,6 @@ PRIMARY KEY (`id`)
 CREATE TABLE `yeticave`.`category`(
 `id` INT NOT NULL AUTO_INCREMENT ,
 `title` VARCHAR(100) NOT NULL ,
-`category_id` INT NOT NULL ,
 PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
